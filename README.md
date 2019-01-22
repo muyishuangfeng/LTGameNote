@@ -365,7 +365,7 @@ __手机必须支持OneStore 服务、安装OneStore客户端并且已经登录_
 
 3、在所使用的moule的 app.build中添加项目引用
 
-    implementation 'com.github.muyishuangfeng:LTGameOneStore:1.0.0'
+    implementation 'com.github.muyishuangfeng:LTGameOneStore:1.0.1'
 ![OneStore接入.png](https://upload-images.jianshu.io/upload_images/1716569-e37fac3a8c094f23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
