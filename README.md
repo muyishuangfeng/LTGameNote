@@ -1010,8 +1010,8 @@ __注意: 如果之前接入了Google Play支付不可重复配置__
 ![4](https://upload-images.jianshu.io/upload_images/1716569-84f44d0667d0283a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
      2）、在项目的app.build中引用UI的网络包如下所示：
 
-       implementation 'com.github.muyishuangfeng:LTGameUI:1.0.1'
-        ![UI接入.png](https://upload-images.jianshu.io/upload_images/1716569-91dc1c9d0ea3a8cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+       implementation 'com.github.muyishuangfeng:LTGameUI:1.0.5'
+       
 
 
 
@@ -1041,3 +1041,22 @@ __注意: 如果之前接入了Google Play支付不可重复配置__
                 bundle.putString("mPrivacyUrl", "xxx");
                 intent.putExtra("bundleData", bundle);
                 startActivity(intent);
+  + 点击进入游戏页面返回值
+  
+     BaseResult.MSG_RESULT_JUMP_INTO_GAME//进入游戏回调
+     
+   + 使用方法
+     1、在onCreate中注册
+     EventUtils.register(this);
+     2、在onStop或者onDestory方法中反注册
+     EventUtils.unregister(this);
+     3、接收方法
+      @Subscribe
+    protected void receiveEvent(Event event){
+        switch (event.getCode()){
+            case BaseResult.MSG_RESULT_JUMP_INTO_GAME:{
+                Log.e("Mian","jumpIn");
+                break;
+            }
+        }
+    }
