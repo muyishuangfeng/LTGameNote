@@ -479,6 +479,10 @@ __手机必须支持OneStore 服务、安装OneStore客户端并且已经登录_
         super.onDestroy();
         OneStorePayManager.getInstance(this, PUBLIC_KEY).release();
     }
+    
+    
++ 5、参考配置
+[OneStore 配置参考](https://dev.onestore.co.kr/devpoc/reference/view/IAP_v17_cn)
   
 #### 结果码
 
@@ -524,7 +528,7 @@ __手机必须支持OneStore 服务、安装OneStore客户端并且已经登录_
 
 + 2、在需要QQ登录的项目的配置文件（app.build）中添加引用
 
-       implementation 'com.github.muyishuangfeng:LTGameQQ:1.0.0'
+       implementation 'com.github.muyishuangfeng:LTGameQQ:1.0.1'
 
 ![QQ接入.png](https://upload-images.jianshu.io/upload_images/1716569-ce6b23a6261370c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
