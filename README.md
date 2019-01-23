@@ -142,7 +142,7 @@ __3、支付结果回调参数说明__
   
   + 3、在所使用的moule的 app.build中添加项目引用
 
-         implementation 'com.github.muyishuangfeng:LTGameGoogle:1.0.1'
+         implementation 'com.github.muyishuangfeng:LTGameGoogle:1.0.2'
 ![Google接入.png](https://upload-images.jianshu.io/upload_images/1716569-8740cc2560c5e2e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
@@ -228,8 +228,12 @@ __3、支付结果回调参数说明__
          super.onDestroy();
          GooglePlayManager.release();
        }
+       
+       
+ + 5 、Google play 配置参考
+ [Google Play 配置参考](https://blog.csdn.net/alex_my/article/details/82984706#2__8)
 
- + 5、结果码（具体以接口回调结果为准）
+ + 6、结果码（具体以接口回调结果为准）
 
        1、 init Success 初始化成功
        2、 Order creation failed 订单创建失败
@@ -365,7 +369,7 @@ __手机必须支持OneStore 服务、安装OneStore客户端并且已经登录_
 
 3、在所使用的moule的 app.build中添加项目引用
 
-    implementation 'com.github.muyishuangfeng:LTGameOneStore:1.0.1'
+    implementation 'com.github.muyishuangfeng:LTGameOneStore:1.0.3'
 ![OneStore接入.png](https://upload-images.jianshu.io/upload_images/1716569-e37fac3a8c094f23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
@@ -633,7 +637,7 @@ __手机必须支持OneStore 服务、安装OneStore客户端并且已经登录_
 
     //用以回调微信登录返回信息
       implementation 'org.greenrobot:eventbus:3.1.1'
-      implementation 'com.github.muyishuangfeng:LTGameWeChat:1.0.0'
+      implementation 'com.github.muyishuangfeng:LTGameWeChat:1.0.1'
 ![微信接入.png](https://upload-images.jianshu.io/upload_images/1716569-a0f7b1b0ee8fea4d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
      
@@ -718,7 +722,7 @@ __手机必须支持OneStore 服务、安装OneStore客户端并且已经登录_
 ![4](https://upload-images.jianshu.io/upload_images/1716569-84f44d0667d0283a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
        2）、在项目的app.build中引用facebook的网络包如下所示
 
-     implementation 'com.github.muyishuangfeng:LTGameFaceBook:1.0.0'
+     implementation 'com.github.muyishuangfeng:LTGameFaceBook:1.0.1'
 
 ![faceBook接入.png](https://upload-images.jianshu.io/upload_images/1716569-dcb3b5e6ab35bc33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -854,7 +858,7 @@ __注意:facebook_app_id为facebook平台申请的appID，fb_login_protocol_sche
 ![4](https://upload-images.jianshu.io/upload_images/1716569-84f44d0667d0283a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
        2）、在项目的app.build中引用google的网络包如下所示：
 
-        implementation 'com.github.muyishuangfeng:LTGameFaceBook:1.0.1'
+        implementation 'com.github.muyishuangfeng:LTGameFaceBook:1.0.2'
 ![Google接入.png](https://upload-images.jianshu.io/upload_images/1716569-63b6286481c4f5b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
@@ -1010,7 +1014,7 @@ __注意: 如果之前接入了Google Play支付不可重复配置__
 ![4](https://upload-images.jianshu.io/upload_images/1716569-84f44d0667d0283a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
      2）、在项目的app.build中引用UI的网络包如下所示：
 
-       implementation 'com.github.muyishuangfeng:LTGameUI:1.0.5'
+       implementation 'com.github.muyishuangfeng:LTGameUI:1.0.6'
        
 
 
