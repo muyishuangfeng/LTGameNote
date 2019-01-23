@@ -483,6 +483,7 @@ __手机必须支持OneStore 服务、安装OneStore客户端并且已经登录_
     
 + 5、参考配置
 [OneStore 配置参考](https://dev.onestore.co.kr/devpoc/reference/view/IAP_v17_cn)
+[OneStore github参考](https://github.com/ONE-store/iap_v5/tree/onestore_iap_sample)
   
 #### 结果码
 
