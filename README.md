@@ -968,7 +968,8 @@ __注意: 如果之前接入了Google Play支付不可重复配置__
          void onError(String error);
 
         }
-    + 5、方法引用
+        
+   + 5、方法引用
                
                1、登录方法
               GoogleLoginManager.googleLogin(this,
@@ -1005,11 +1006,14 @@ __注意: 如果之前接入了Google Play支付不可重复配置__
                  3、断开连接（在onStop或者onDestory里面）
                   GoogleLoginManager.stopConnection(this);
              
-      + 6、结果码说明（具体可查看返回值）
+    + 6、结果码说明（具体可查看返回值）
 
                  "OK"或者200表示成功
                  "NO"表示登录失败
                  "12500"表示在google配置的sha1错误
+    + 7、google登录配置
+       
+         [Google登录配置](https://blog.csdn.net/liutong123987/article/details/79417652)
 
   ### UI包配置说明
 
