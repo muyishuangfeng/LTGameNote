@@ -863,7 +863,7 @@ __注意:facebook_app_id为facebook平台申请的appID，fb_login_protocol_sche
 ![4](https://upload-images.jianshu.io/upload_images/1716569-84f44d0667d0283a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
        2）、在项目的app.build中引用google的网络包如下所示：
 
-        implementation 'com.github.muyishuangfeng:LTGameFaceBook:1.0.2'
+        implementation 'com.github.muyishuangfeng:LTGameFaceBook:1.0.4'
 ![Google接入.png](https://upload-images.jianshu.io/upload_images/1716569-63b6286481c4f5b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
@@ -876,12 +876,15 @@ __注意: 如果之前接入了Google Play支付不可重复配置__
 |:------:|:------:|:-----:|:------|
 |context| Context|是|上下文|
 |server_client_id| String|是|google平台申请的clientID|
+|selfRequestCode|int|是|请求码（自定义）|
 
    2）、回调参数
  |参数|类型|是否必须|说明|
 |:------:|:------:|:-----:|:------|
 |requestCode| int|是|onActivityResult方法中对应的requestCode|
 |data| Intent|是|onActivityResult方法中对应的data|
+|selfRequestCode| int|是|和上面的自定义selfRequestCode对应|
+|content|Context|是|上下文|
 |baseUrl|String|是|乐推服务器url|
 |LT-AppID|String|是|每个应用对应的appid|
 |LTAppKey|String|是|每个应用对应的appKey|
@@ -972,39 +975,39 @@ __注意: 如果之前接入了Google Play支付不可重复配置__
    + 5、方法引用
                
                1、登录方法
-              GoogleLoginManager.googleLogin(this,
-                serverClientID);
+               GooglePlayLoginManager.initGoogle(this,clientID,REQUEST_CODE);
+         
                2、回调方法
-               GoogleLoginManager.onGoogleResult(requestCode, data, this,
-               baseUrl, LTAppID, LTAPK,
+                GooglePlayLoginManager.onActivityResult(requestCode, data, REQUEST_CODE,
+                this, baseUrl, LTAppID, LTAppKey,
                 new OnLoginSuccessListener() {
                     @Override
                     public void onSuccess(BaseEntry<ResultData> result) {
-                        Log.e("google==","onSuccess"+result.getResult());
+                        Log.e(TAG,result.getMsg()+"=="+result.getCode()+"=="+
+                        result.getData().getApi_token());
                     }
 
                     @Override
                     public void onFailed(Throwable ex) {
-                        Log.e("google==","onFailed"+ex.getMessage());
+                        Log.e(TAG,ex.getMessage());
                     }
 
                     @Override
                     public void onComplete() {
-                        Log.e("google==","onComplete");
+
                     }
 
                     @Override
                     public void onParameterError(String result) {
-                        Log.e("google==","nParameterError"+result);
+                        Log.e(TAG,result);
                     }
 
                     @Override
                     public void onError(String error) {
-                        Log.e("google==","onError"+error);
+                        Log.e(TAG,error);
                     }
                 });
-                 3、断开连接（在onStop或者onDestory里面）
-                  GoogleLoginManager.stopConnection(this);
+                
              
     + 6、结果码说明（具体可查看返回值）
 
